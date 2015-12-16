@@ -1,6 +1,6 @@
 //
 //  UIViewKeyboard.m
-//  StudioWO Specs
+//  Sample
 //
 //  Created by Renato Matos on 16/12/15.
 //  Copyright © 2015 Studio WO. All rights reserved.
@@ -28,7 +28,7 @@
     return self;
 }
 
-#pragma mark - TextField Delefate
+#pragma mark - TextField Delegate
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     [[NSNotificationCenter defaultCenter] postNotificationName:UIKeyboardWillShowNotification object:nil];
@@ -46,7 +46,7 @@
 }
 
 - (void)keyboardDidShow:(NSNotification *)notification {
-    UITextField *textField = [self encontrarTextFieldAtivo];
+    UITextField *textField = [self findActiveTextField];
     
     if (textField) {
         CGRect keyboardBounds;
@@ -74,7 +74,7 @@
     }];
 }
 
-- (UITextField *)encontrarTextFieldAtivo {
+- (UITextField *)findActiveTextField {
     for (UITextField *childView in self.subviews ) {
         if ([childView respondsToSelector:@selector(isFirstResponder)] && [childView isFirstResponder]) return childView;
     }
