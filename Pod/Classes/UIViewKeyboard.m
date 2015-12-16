@@ -53,14 +53,15 @@
         [[notification.userInfo valueForKey:UIKeyboardFrameBeginUserInfoKey] getValue:&keyboardBounds];
         
         CGFloat textHeight = (textField.frame.origin.y+textField.frame.size.height + 20);
-        if (self.frame.size.height - keyboardBounds.size.height < textHeight) {
-            CGFloat visibleHeight = self.frame.size.height - keyboardBounds.size.height;
+        CGFloat visibleHeight = self.frame.size.height - keyboardBounds.size.height;
+        
+        if (visibleHeight < textHeight) {
             CGFloat posY = textHeight - visibleHeight;
             
             [UIView animateWithDuration:0.5 animations:^{
-                CGRect f = self.frame;
-                f.origin.y = -posY;
-                self.frame = f;
+                CGRect f = self.bounds;
+                f.origin.y = posY;
+                self.bounds = f;
             }];
         }
     }
@@ -68,9 +69,9 @@
 
 - (void)keyboardDidHide:(NSNotification *)notification {
     [UIView animateWithDuration:0.5 animations:^{
-        CGRect f = self.frame;
+        CGRect f = self.bounds;
         f.origin.y = 0.0f;
-        self.frame = f;
+        self.bounds = f;
     }];
 }
 

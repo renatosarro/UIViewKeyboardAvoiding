@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "UIViewKeyboardAvoiding"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A simple way to make your UITextField to be always visible when the keyboard appears"
 
   s.description      = "A simple way to make your UITextField to be always visible, moving up the UIView when the keyboard appears (firstResponder)"
