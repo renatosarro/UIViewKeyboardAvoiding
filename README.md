@@ -14,8 +14,7 @@ pod install
 ```
 
 # Usage
-The first step is to import the UIViewKeyboard class to yout workspace.
-After this, set a Custom Class to View like shown below:
+The first step is to set the UIView Custom Class like shown below:
 
 ![alt tag](https://cloud.githubusercontent.com/assets/14286416/11843048/7b13cbcc-a3ee-11e5-88ef-8c35da02e6a9.png)
 
