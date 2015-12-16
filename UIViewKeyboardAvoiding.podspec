@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.description      = "A simple way to make your UITextField to be always visible, moving up the UIView when the keyboard appears (firstResponder)"
 
   s.homepage         = "https://github.com/renatosarro/UIViewKeyboardAvoiding"
-  s.license          = 'MIT'
+  s.license          = { :type => 'MIT', :file => 'LICENSE.txt' }
   s.author           = { "Renato Matos" => "renatorsarro@gmail.com" }
   s.source           = { :git => "https://github.com/renatosarro/UIViewKeyboardAvoiding.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/rmatos_'
