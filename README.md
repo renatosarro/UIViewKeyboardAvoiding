@@ -1,4 +1,7 @@
 # UIViewKeyboardAvoiding
+A simple way to make your UITextField to be always visible, moving up the UIView when the keyboard appears (firstResponder)
+
+-- soon, pods =)
 
 # Usage
 The first step is to import the UIViewKeyboard class to yout workspace.
