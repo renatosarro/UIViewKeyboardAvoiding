@@ -53,8 +53,9 @@
         [[notification.userInfo valueForKey:UIKeyboardFrameBeginUserInfoKey] getValue:&keyboardBounds];
         
         CGFloat textHeight = (textField.frame.origin.y+textField.frame.size.height + 20);
-        if (self.frame.size.height - keyboardBounds.size.height < textHeight) {
-            CGFloat visibleHeight = self.frame.size.height - keyboardBounds.size.height;
+        CGFloat visibleHeight = self.frame.size.height - keyboardBounds.size.height;
+        
+        if (visibleHeight < textHeight) {
             CGFloat posY = textHeight - visibleHeight;
             
             [UIView animateWithDuration:0.5 animations:^{
@@ -76,7 +77,7 @@
 
 - (UITextField *)findActiveTextField {
     for (UITextField *childView in self.subviews ) {
-        if ([childView respondsToSelector:@selector(isFirstResponder)] && [childView isFirstResponder]) return childView;
+        if ([childView isKindOfClass:[UITextField class]] && [childView respondsToSelector:@selector(isFirstResponder)] && [childView isFirstResponder]) return childView;
     }
     
     return nil;
