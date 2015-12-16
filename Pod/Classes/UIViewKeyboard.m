@@ -59,9 +59,9 @@
             CGFloat posY = textHeight - visibleHeight;
             
             [UIView animateWithDuration:0.5 animations:^{
-                CGRect f = self.frame;
+                CGRect f = self.bounds;
                 f.origin.y = -posY;
-                self.frame = f;
+                self.bounds = f;
             }];
         }
     }
@@ -69,9 +69,9 @@
 
 - (void)keyboardDidHide:(NSNotification *)notification {
     [UIView animateWithDuration:0.5 animations:^{
-        CGRect f = self.frame;
+        CGRect f = self.bounds;
         f.origin.y = 0.0f;
-        self.frame = f;
+        self.bounds = f;
     }];
 }
 
