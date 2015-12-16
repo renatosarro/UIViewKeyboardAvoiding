@@ -15,14 +15,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIViewKeyboard">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Test UITextField" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYi-fA-KOs">
-                                <rect key="frame" x="40" y="60" width="520" height="40"/>
+                                <rect key="frame" x="16" y="40" width="288" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="4oH-Mf-iBm"/>
+                                    <constraint firstAttribute="height" constant="30" id="4oH-Mf-iBm"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -35,11 +35,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="eYi-fA-KOs" secondAttribute="trailing" constant="20" id="ROK-qm-DLi"/>
-                            <constraint firstItem="eYi-fA-KOs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Wc3-HX-6qa"/>
-                            <constraint firstItem="eYi-fA-KOs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="gxx-yE-UiE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eYi-fA-KOs" secondAttribute="trailing" id="ROK-qm-DLi"/>
+                            <constraint firstItem="eYi-fA-KOs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wc3-HX-6qa"/>
+                            <constraint firstItem="eYi-fA-KOs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="gxx-yE-UiE"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
